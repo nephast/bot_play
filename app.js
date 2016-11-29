@@ -86,7 +86,7 @@ function sendCatMessage(sender) {
                     "image_url": "http://i.imgur.com/Jvh1OQm.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://i.imgur.com/Jvh1OQm.jpg",
+                        "url": "http://food2fork.com/api/search?key=c0c25c89cc10b6cff23ba5de7ce2bc3e&q=shredded%20chicken",
                         "title": "See original"
                     }, {
                         "type": "postback",
