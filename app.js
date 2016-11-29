@@ -46,6 +46,7 @@ app.post('/webhook/', function (req, res) {
   })
 
 const token = process.env.FB_PAGE_ACCESS_TOKEN
+const food = process.env.FORK_COOK
 
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
@@ -74,6 +75,7 @@ function sendTextMessage(sender, text) {
     })
 }
 
+//Playing with this function to get communicate with food2fork API
 function sendCatMessage(sender) {
     let messageData = {
         "attachment": {
@@ -86,7 +88,7 @@ function sendCatMessage(sender) {
                     "image_url": "http://i.imgur.com/Jvh1OQm.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "http://food2fork.com/api/search?key=c0c25c89cc10b6cff23ba5de7ce2bc3e&q=shredded%20chicken",
+                        "url": "http://food2fork.com/api/search?key=" + food + "&q=shredded%20chicken",
                         "title": "See original"
                     }, {
                         "type": "postback",
